@@ -1,6 +1,54 @@
 [package]
 name = "lightning-log"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2024"
+authors = ["Sabir Khan <simplysabir@gmail.com>"]
+description = "Ultra-fast zero-allocation logging for high-frequency trading and low-latency systems"
+repository = "https://github.com/simplysabir/lightning-log"
+license = "MIT OR Apache-2.0"
+keywords = ["logging", "hft", "low-latency", "trading", "performance"]
+categories = ["development-tools::debugging", "finance"]
+readme = "README.md"
+documentation = "https://docs.rs/lightning-log"
 
 [dependencies]
+crossbeam-channel = "0.5"
+core_affinity = { version = "0.8", optional = true }
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+log = "0.4"
+env_logger = "0.10"
+serde = { version = "1.0", features = ["derive"] }
+bincode = "1.3"
+tokio = { version = "1.0", features = ["full"] }
+rand = "0.8"
+
+[features]
+default = ["cpu-affinity"]
+cpu-affinity = ["dep:core_affinity"]
+
+[[bench]]
+name = "logging_benchmark"
+harness = false
+
+[[example]]
+name = "basic_usage"
+path = "examples/basic_usage.rs"
+
+[[example]]
+name = "trading_simulation"
+path = "examples/trading_simulation.rs"
+
+[[example]]
+name = "log_crate_comparison"
+path = "examples/log_crate_comparison.rs"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.bench]
+lto = true
+codegen-units = 1
