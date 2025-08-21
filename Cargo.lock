@@ -350,7 +350,7 @@ checksum = "6a82ae493e598baaea5209805c49bbf2ea7de956d50d7da0da1164f9c6d28543"
 
 [[package]]
 name = "lightning-log"
-version = "1.0.0"
+version = "1.1.0"
 dependencies = [
  "bincode",
  "core_affinity",

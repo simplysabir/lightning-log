@@ -1,6 +1,6 @@
 [package]
 name = "lightning-log"
-version = "1.0.0"
+version = "1.1.0"
 edition = "2024"
 authors = ["Sabir Khan <simplysabir@gmail.com>"]
 description = "Ultra-fast zero-allocation logging for high-frequency trading and low-latency systems"
