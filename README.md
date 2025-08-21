@@ -174,7 +174,7 @@ Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-lightning-log = "1.0"
+lightning-log = "1.1.0"
 ```
 
 For development and benchmarking:

@@ -8,7 +8,7 @@ repository = "https://github.com/simplysabir/lightning-log"
 license = "MIT OR Apache-2.0"
 keywords = ["logging", "hft", "low-latency", "trading", "performance"]
 categories = ["development-tools::debugging", "finance"]
-readme = "https://github.com/simplysabir/lightning-log#readme"
+readme = "https://github.com/simplysabir/lightning-log/blob/master/README.md"
 documentation = "https://github.com/simplysabir/lightning-log#readme"
 
 [dependencies]
